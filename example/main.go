@@ -6,6 +6,7 @@ import (
 
 	"github.com/timdrijvers/recommendation/matrix"
 	"github.com/timdrijvers/recommendation/recommendation"
+	"gonum.org/v1/gonum/mat"
 )
 
 func main() {
@@ -22,6 +23,7 @@ func main() {
 	defer file.Close()
 
 	baseMatrix := matrix.LabelMatrixFromCSV(file)
+	//matPrint(baseMatrix)
 	rowLabel := baseMatrix.RowLabel.IndexOf(os.Args[2])
 	if rowLabel == -1 {
 		fmt.Fprintf(os.Stderr, "Can not find row %s\n", os.Args[2])
@@ -42,4 +44,10 @@ func main() {
 	recommend.Visit(func(index int, value float64) {
 		fmt.Println(baseMatrix.ColumnLabel[index], value)
 	})
+}
+
+func matPrint(X *matrix.LabeledMatrix) {
+
+	fa := mat.Formatted(X, mat.Prefix(""), mat.Squeeze())
+	fmt.Printf("%v\n", fa)
 }
