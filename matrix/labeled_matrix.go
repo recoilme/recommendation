@@ -45,6 +45,7 @@ func LabelMatrixFromCSV(r io.Reader) *LabeledMatrix {
 		rowsLabel = append(rowsLabel, rawRecord[0])
 		record := make([]float64, columnsLen)
 		for i, v := range rawRecord[1:] {
+
 			record[i], _ = strconv.ParseFloat(v, 64)
 		}
 		matrixData = append(matrixData, record...)
