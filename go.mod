@@ -1,9 +1,8 @@
-module github.com/timdrijvers/recommendation
+module github.com/recoilme/recommendation
 
-go 1.12
+go 1.13
 
 require (
-	github.com/stretchr/testify v1.3.0
 	github.com/yourbasic/bit v0.0.0-20180313074424-45a4409f4082
-	gonum.org/v1/gonum v0.0.0-20190724213354-3129c79de289
+	gonum.org/v1/gonum v0.6.2
 )

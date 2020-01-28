@@ -6,6 +6,7 @@ import (
 	"gonum.org/v1/gonum/mat"
 
 	"github.com/recoilme/recommendation/matrix"
+
 	"github.com/yourbasic/bit"
 )
 

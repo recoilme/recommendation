@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/timdrijvers/recommendation/matrix"
-	"github.com/timdrijvers/recommendation/recommendation"
+	"github.com/recoilme/recommendation/matrix"
+	"github.com/recoilme/recommendation/recommendation"
 	"gonum.org/v1/gonum/mat"
 )
 
